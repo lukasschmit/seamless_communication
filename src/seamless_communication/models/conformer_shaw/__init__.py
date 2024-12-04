@@ -10,9 +10,9 @@ from seamless_communication.models.conformer_shaw.builder import (
 from seamless_communication.models.conformer_shaw.builder import (
     ConformerShawEncoderConfig as ConformerShawEncoderConfig,
 )
-from seamless_communication.models.conformer_shaw.builder import (
-    conformer_shaw_archs as conformer_shaw_archs,
-)
+# from seamless_communication.models.conformer_shaw.builder import (
+#     conformer_shaw_archs as conformer_shaw_archs,
+# )
 from seamless_communication.models.conformer_shaw.builder import (
     create_conformer_shaw_model as create_conformer_shaw_model,
 )
