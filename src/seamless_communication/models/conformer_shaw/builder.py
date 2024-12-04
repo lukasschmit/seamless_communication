@@ -8,7 +8,7 @@ from dataclasses import asdict, dataclass, field
 from typing import Final, Optional
 
 from fairseq2.models.conformer import ConformerConvolution
-from fairseq2.models.architecture_registry import ModelArchitectureRegistry
+# from fairseq2.models.architecture_registry import ModelArchitectureRegistry
 from fairseq2.models.w2vbert import w2vbert_archs
 from fairseq2.models.wav2vec2 import (
     Wav2Vec2Builder,
@@ -55,9 +55,9 @@ class ConformerShawConfig(Wav2Vec2Config):
     )
 
 
-conformer_shaw_archs = ModelArchitectureRegistry[ConformerShawConfig]()
+# conformer_shaw_archs = ModelArchitectureRegistry[ConformerShawConfig]()
 
-conformer_shaw_arch = conformer_shaw_archs.decorator
+# conformer_shaw_arch = cosnformer_shaw_archs.decorator
 
 def _conformer_shaw_600m_encoder() -> ConformerShawEncoderConfig:
     w2vbert_config = w2vbert_archs.get_config("600m")
@@ -75,28 +75,28 @@ def _conformer_shaw_600m_encoder() -> ConformerShawEncoderConfig:
     return conformer_shaw_encoder_config
 
 
-@conformer_shaw_arch("conformer_shaw_600m")
-def _conformer_shaw_600m() -> ConformerShawConfig:
-    encoder_config = _conformer_shaw_600m_encoder()
+# @conformer_shaw_arch("conformer_shaw_600m")
+# def _conformer_shaw_600m() -> ConformerShawConfig:
+#     encoder_config = _conformer_shaw_600m_encoder()
 
-    return ConformerShawConfig(
-        encoder_config,
-        final_dim=768,
-        final_proj_bias=True,
-        temporal_mask_span_len=10,
-        max_temporal_mask_prob=0.65,
-        min_num_temporal_mask_spans=2,
-        spatial_mask_span_len=10,
-        max_spatial_mask_prob=0.0,
-        min_num_spatial_mask_spans=2,
-        quantized_dim=768,
-        num_codebooks=2,
-        num_codebook_entries=320,
-        codebook_sampling_temperature=(2.0, 0.1, 0.999995),
-        num_distractors=100,
-        logit_temp=0.1,
-        diversity_loss_weight=0.2,
-    )
+#     return ConformerShawConfig(
+#         encoder_config,
+#         final_dim=768,
+#         final_proj_bias=True,
+#         temporal_mask_span_len=10,
+#         max_temporal_mask_prob=0.65,
+#         min_num_temporal_mask_spans=2,
+#         spatial_mask_span_len=10,
+#         max_spatial_mask_prob=0.0,
+#         min_num_spatial_mask_spans=2,
+#         quantized_dim=768,
+#         num_codebooks=2,
+#         num_codebook_entries=320,
+#         codebook_sampling_temperature=(2.0, 0.1, 0.999995),
+#         num_distractors=100,
+#         logit_temp=0.1,
+#         diversity_loss_weight=0.2,
+#     )
 
 
 class ConformerShawEncoderBuilder(Wav2Vec2EncoderBuilder):
