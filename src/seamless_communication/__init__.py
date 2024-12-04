@@ -6,7 +6,8 @@
 
 from pathlib import Path
 
-from fairseq2.assets import FileAssetMetadataProvider, asset_store
+from fairseq2.assets import FileAssetMetadataProvider
+from fairseq2.assets import default_asset_store as asset_store
 
 __version__ = "0.1.0"
 
