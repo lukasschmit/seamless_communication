@@ -16,6 +16,6 @@ from seamless_communication.models.conformer_shaw.builder import (
 from seamless_communication.models.conformer_shaw.builder import (
     create_conformer_shaw_model as create_conformer_shaw_model,
 )
-from seamless_communication.models.conformer_shaw.loader import (
-    load_conformer_shaw_model as load_conformer_shaw_model,
-)
+# from seamless_communication.models.conformer_shaw.loader import (
+#     load_conformer_shaw_model as load_conformer_shaw_model,
+# )

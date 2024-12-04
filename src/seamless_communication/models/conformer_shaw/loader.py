@@ -8,7 +8,7 @@ from typing import Any, Dict
 
 import torch
 
-from fairseq2.models import setup_model_family
+# from fairseq2.models import setup_model_family
 from fairseq2.models.utils.checkpoint import convert_fairseq_checkpoint
 from fairseq2.models.wav2vec2 import Wav2Vec2Model
 
@@ -73,10 +73,10 @@ def convert_conformer_shaw_checkpoint(
     return convert_fairseq_checkpoint(checkpoint, key_map)
 
 
-load_conformer_shaw_model, load_conformer_shaw_config = setup_model_family(
-    CONFORMER_SHAW_FAMILY,
-    ConformerShawConfig,
-    create_conformer_shaw_model,
-    conformer_shaw_archs,
-    convert_conformer_shaw_checkpoint,
-)
+# load_conformer_shaw_model, load_conformer_shaw_config = setup_model_family(
+#     CONFORMER_SHAW_FAMILY,
+#     ConformerShawConfig,
+#     create_conformer_shaw_model,
+#     conformer_shaw_archs,
+#     convert_conformer_shaw_checkpoint,
+# )
